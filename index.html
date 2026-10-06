@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CineCast</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topo">
+    <h1>Cine Cast </h1>
+    <p>Pesquise seu ator favorito e descubra o país e a data de nascimento.</p>
+
+    <div class="busca">
+      <input
+        type="text"
+        id="busca"
+        placeholder="Digite o nome"
+        oninput="filtrarAtores()"
+        autocomplete="off"
+      >
+      <button type="button" onclick="limparBusca()">Limpar</button>
+    </div>
+
+    <p id="contador" class="contador"></p>
+  </header>
+
+  <main>
+    <div id="grid" class="grid"></div>
+    <p id="vazio" class="vazio" hidden>Nenhum ator ou atriz encontrado.</p>
+  </main>
+
+  <script src="dados.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
